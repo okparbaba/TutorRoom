@@ -11,6 +11,7 @@ public class CreditPackage implements Serializable {
     private String packageName;
     private double packageCredit;
     private double packageAmount;
+    private double packageAmountOld;
     private String packageDesc;
     private int status;
     private String comment;
@@ -22,10 +23,19 @@ public class CreditPackage implements Serializable {
         packageName = json.getString("name");
         packageCredit = Double.parseDouble(json.getString("credit"));
         packageAmount = Double.parseDouble(json.getString("amount"));
+        packageAmountOld = Double.parseDouble(json.getString("priceBeforeDiscount"));
         packageDesc = json.getString("description");
         status = Integer.parseInt(json.getString("status"));
         comment = json.getString("comments");
         updateDate = json.getString("updatedate");
+    }
+
+    public double getPackageAmountOld() {
+        return packageAmountOld;
+    }
+
+    public void setPackageAmountOld(double packageAmountOld) {
+        this.packageAmountOld = packageAmountOld;
     }
 
     public String getCreditID() {

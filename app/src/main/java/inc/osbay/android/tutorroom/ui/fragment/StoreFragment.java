@@ -51,14 +51,14 @@ public class StoreFragment extends BackHandledFragment implements MainCreditPack
     TextView creditTV;
     @BindView(R.id.main_credit_package)
     RecyclerView creditPackageRV;
-    @BindView(R.id.sb_select_credit)
-    SeekBar creditBar;
-    @BindView(R.id.tv_selected_credit)
-    TextView buyingCreditTV;
-    @BindView(R.id.tv_total_cost)
-    TextView costTV;
-    @BindView(R.id.buy_dynamic)
-    TextView buyDynamicTV;
+//    @BindView(R.id.sb_select_credit)
+//    SeekBar creditBar;
+//    @BindView(R.id.tv_selected_credit)
+//    TextView buyingCreditTV;
+//    @BindView(R.id.tv_total_cost)
+//    TextView costTV;
+//    @BindView(R.id.buy_dynamic)
+//    TextView buyDynamicTV;
     private ServerRequestManager mServerRequestManager;
     private String accountId;
     private List<CreditPackage> creditPackageList = new ArrayList<>();
@@ -94,31 +94,31 @@ public class StoreFragment extends BackHandledFragment implements MainCreditPack
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        creditBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
-                /*if (progress < minAmount) {
-                    progress = minAmount;
-                    seekBar.setProgress(progress);
-                }*/
-                seekBar.setProgress(i);
-                buyingCreditTV.setText(String.valueOf(i));
-                double amount = i * creditAmount;
-                costTV.setText(String.valueOf(amount));
-            }
-
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-
-            }
-
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-
-            }
-        });
-        buyingCreditTV.setText(getString(R.string._1));
-        costTV.setText(String.valueOf(1 * creditAmount));
+//        creditBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+//            @Override
+//            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+//                /*if (progress < minAmount) {
+//                    progress = minAmount;
+//                    seekBar.setProgress(progress);
+//                }*/
+//                seekBar.setProgress(i);
+//                buyingCreditTV.setText(String.valueOf(i));
+//                double amount = i * creditAmount;
+//                costTV.setText(String.valueOf(amount));
+//            }
+//
+//            @Override
+//            public void onStartTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//
+//            @Override
+//            public void onStopTrackingTouch(SeekBar seekBar) {
+//
+//            }
+//        });
+//        buyingCreditTV.setText(getString(R.string._1));
+//        costTV.setText(String.valueOf(1 * creditAmount));
     }
 
     @Override
@@ -129,16 +129,22 @@ public class StoreFragment extends BackHandledFragment implements MainCreditPack
         setDisplayHomeAsUpEnable(true);
     }
 
-    @OnClick(R.id.buy_dynamic)
-    void buyDynamic() {
-        buyCredit(CommonConstant.buyCredit, buyingCreditTV.getText().toString()
-                , null);
+//    @OnClick(R.id.buy_dynamic)
+//    void buyDynamic() {
+//        buyCredit(CommonConstant.buyCredit, buyingCreditTV.getText().toString()
+//                , null);
+//    }
+    @OnClick(R.id.contact)
+    void goContactFra(){
+        Intent intent = new Intent(getActivity(), FragmentHolderActivity.class);
+        intent.putExtra(FragmentHolderActivity.EXTRA_DISPLAY_FRAGMENT, ContactFragment.class.getSimpleName());
+        startActivity(intent);
     }
 
     @Override
     public void onResume() {
         super.onResume();
-        ProgressDialog progressDialog = new ProgressDialog(getActivity());
+        final ProgressDialog progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage(getString(R.string.loading));
         progressDialog.show();
 
@@ -218,7 +224,7 @@ public class StoreFragment extends BackHandledFragment implements MainCreditPack
     }
 
     public void buyCredit(int buyType, String credit, String packageID) {
-        ProgressDialog progressDialog = new ProgressDialog(getActivity());
+        final ProgressDialog progressDialog = new ProgressDialog(getActivity());
         progressDialog.setMessage(getString(R.string.loading));
         progressDialog.show();
         mServerRequestManager.buyCredit(accountId, buyType, credit, packageID,
@@ -253,9 +259,9 @@ public class StoreFragment extends BackHandledFragment implements MainCreditPack
     }
 
     @Override
-    public void onItemClick(CreditPackage creditPackage) {
+    public void onItemClick(final CreditPackage creditPackage) {
         this.creditPackage = creditPackage;
-        Dialog dialog = new Dialog(getActivity());
+        final Dialog dialog = new Dialog(getActivity());
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.buy_credit_package_layout);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(android.graphics.Color.TRANSPARENT));
@@ -268,9 +274,7 @@ public class StoreFragment extends BackHandledFragment implements MainCreditPack
         creditContent.setText(String.valueOf(creditPackage.getPackageAmount()));
         creditTitle.setText(String.valueOf(creditPackage.getPackageCredit()));
 
-        closeImg.setOnClickListener(view ->
-                dialog.dismiss()
-        );
+        closeImg.setOnClickListener(view -> dialog.dismiss());
 
         buy.setOnClickListener(view -> {
             dialog.dismiss();

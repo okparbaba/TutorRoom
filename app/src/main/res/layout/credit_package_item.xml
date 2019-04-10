@@ -35,9 +35,53 @@
         </LinearLayout>
     </RelativeLayout>
 
-
+<LinearLayout
+    android:id="@+id/credit_package_content_ll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/credit_package_title_ll"
+    android:layout_centerHorizontal="true"
+    android:orientation="horizontal"
+    android:padding="@dimen/dp8">
     <LinearLayout
-        android:id="@+id/credit_package_content_ll"
+        android:id="@+id/credit_package_content_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp5"
+        android:paddingVertical="@dimen/dp15">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp2"
+            android:text="@string/dollar"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/font15"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/credit_content_old"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/strike_through_text"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/font20"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp2"
+            android:text="@string/usd"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/font15"
+            android:textStyle="bold"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/credit_package_content_one"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/credit_package_title_ll"
@@ -71,6 +115,9 @@
             android:textSize="@dimen/font20"
             android:textStyle="bold"/>
     </LinearLayout>
+</LinearLayout>
+
+
 
     <TextView
         android:id="@+id/buy"

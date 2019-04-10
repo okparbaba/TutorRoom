@@ -95,162 +95,162 @@
                 android:layout_margin="@dimen/dp8"/>
 
 
-            <android.support.v7.widget.CardView
-                android:id="@+id/cardview"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/main_credit_package"
-                android:layout_margin="@dimen/dp8"
-                app:cardElevation="3dp">
+            <!--<android.support.v7.widget.CardView-->
+                <!--android:id="@+id/cardview"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/main_credit_package"-->
+                <!--android:layout_margin="@dimen/dp8"-->
+                <!--app:cardElevation="3dp">-->
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/pale_blue"
-                    android:orientation="vertical"
-                    android:padding="10dp">
+                <!--<LinearLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:background="@color/pale_blue"-->
+                    <!--android:orientation="vertical"-->
+                    <!--android:padding="10dp">-->
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="@string/buy_ammount"
-                        android:textAlignment="center"
-                        android:textColor="@color/white"
-                        android:textStyle="bold"/>
+                    <!--<TextView-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="@string/buy_ammount"-->
+                        <!--android:textAlignment="center"-->
+                        <!--android:textColor="@color/white"-->
+                        <!--android:textStyle="bold"/>-->
 
-                    <View
-                        android:layout_width="match_parent"
-                        android:layout_height="@dimen/dp2"
-                        android:layout_margin="@dimen/dp8"
-                        android:background="@color/white"/>
+                    <!--<View-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="@dimen/dp2"-->
+                        <!--android:layout_margin="@dimen/dp8"-->
+                        <!--android:background="@color/white"/>-->
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
+                    <!--<RelativeLayout-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content">-->
 
-                        <TextView
-                            android:id="@+id/tv_4"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="10dp"
-                            android:text="4"
-                            android:textColor="@color/white"/>
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_4"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginStart="10dp"-->
+                            <!--android:text="4"-->
+                            <!--android:textColor="@color/white"/>-->
 
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_toStartOf="@id/tv_100"
-                            android:layout_toEndOf="@id/tv_4"
-                            android:gravity="center_horizontal"
-                            android:text="50"
-                            android:textColor="@color/white"/>
+                        <!--<TextView-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_toStartOf="@id/tv_100"-->
+                            <!--android:layout_toEndOf="@id/tv_4"-->
+                            <!--android:gravity="center_horizontal"-->
+                            <!--android:text="50"-->
+                            <!--android:textColor="@color/white"/>-->
 
-                        <TextView
-                            android:id="@+id/tv_100"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerHorizontal="true"
-                            android:text="100"
-                            android:textColor="@color/white"/>
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_100"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_centerHorizontal="true"-->
+                            <!--android:text="100"-->
+                            <!--android:textColor="@color/white"/>-->
 
-                        <!--<TextView
-                            android:id="@+id/tv_150"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_toStartOf="@id/tv_200"
-                            android:text="150"
-                            android:textColor="@color/white"/>-->
+                        <!--&lt;!&ndash;<TextView-->
+                            <!--android:id="@+id/tv_150"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_toStartOf="@id/tv_200"-->
+                            <!--android:text="150"-->
+                            <!--android:textColor="@color/white"/>&ndash;&gt;-->
 
-                        <TextView
-                            android:id="@+id/tv_200"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentEnd="true"
-                            android:text="200"
-                            android:textColor="@color/white"/>
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_200"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_alignParentEnd="true"-->
+                            <!--android:text="200"-->
+                            <!--android:textColor="@color/white"/>-->
 
-                    </RelativeLayout>
+                    <!--</RelativeLayout>-->
 
-                    <SeekBar
-                        android:id="@+id/sb_select_credit"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dp8"
-                        android:layout_marginBottom="@dimen/dp8"
-                        android:max="200"
-                        android:progress="4"
-                        android:progressDrawable="@drawable/progress_red"
-                        android:thumb="@drawable/seekbar_control_red"/>
+                    <!--<SeekBar-->
+                        <!--android:id="@+id/sb_select_credit"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_marginTop="@dimen/dp8"-->
+                        <!--android:layout_marginBottom="@dimen/dp8"-->
+                        <!--android:max="200"-->
+                        <!--android:progress="4"-->
+                        <!--android:progressDrawable="@drawable/progress_red"-->
+                        <!--android:thumb="@drawable/seekbar_control_red"/>-->
 
-                    <LinearLayout
-                        android:id="@+id/result"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginBottom="10dp"
-                        android:orientation="horizontal">
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/result"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:layout_marginBottom="10dp"-->
+                        <!--android:orientation="horizontal">-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/credit"
-                            android:textColor="@color/white"/>
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:text="@string/credit"-->
+                            <!--android:textColor="@color/white"/>-->
 
-                        <TextView
-                            android:id="@+id/tv_selected_credit"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginStart="@dimen/dp2"
-                            android:layout_marginEnd="@dimen/dp2"
-                            android:textAppearance="@android:style/TextAppearance.Medium"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"/>
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_selected_credit"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginStart="@dimen/dp2"-->
+                            <!--android:layout_marginEnd="@dimen/dp2"-->
+                            <!--android:textAppearance="@android:style/TextAppearance.Medium"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:textStyle="bold"/>-->
 
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/dp2"
-                            android:text="@string/dash"
-                            android:textColor="@color/white"/>
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginEnd="@dimen/dp2"-->
+                            <!--android:text="@string/dash"-->
+                            <!--android:textColor="@color/white"/>-->
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginEnd="@dimen/dp2"
-                            android:text="@string/usd"
-                            android:textColor="@color/white"/>
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginEnd="@dimen/dp2"-->
+                            <!--android:text="@string/usd"-->
+                            <!--android:textColor="@color/white"/>-->
 
-                        <TextView
-                            android:id="@+id/tv_total_cost"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:textAppearance="@android:style/TextAppearance.Medium"
-                            android:textColor="@color/white"
-                            android:textStyle="bold"/>
-                    </LinearLayout>
+                        <!--<TextView-->
+                            <!--android:id="@+id/tv_total_cost"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:textAppearance="@android:style/TextAppearance.Medium"-->
+                            <!--android:textColor="@color/white"-->
+                            <!--android:textStyle="bold"/>-->
+                    <!--</LinearLayout>-->
 
-                    <TextView
-                        android:id="@+id/buy_dynamic"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_margin="@dimen/dp8"
-                        android:background="@drawable/blue_btn_bg"
-                        android:paddingStart="@dimen/dp25"
-                        android:paddingTop="@dimen/dp8"
-                        android:paddingEnd="@dimen/dp25"
-                        android:paddingBottom="@dimen/dp8"
-                        android:text="@string/buy"
-                        android:textColor="@color/white"/>
-                </LinearLayout>
-            </android.support.v7.widget.CardView>
+                    <!--<TextView-->
+                        <!--android:id="@+id/buy_dynamic"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_gravity="center_horizontal"-->
+                        <!--android:layout_margin="@dimen/dp8"-->
+                        <!--android:background="@drawable/blue_btn_bg"-->
+                        <!--android:paddingStart="@dimen/dp25"-->
+                        <!--android:paddingTop="@dimen/dp8"-->
+                        <!--android:paddingEnd="@dimen/dp25"-->
+                        <!--android:paddingBottom="@dimen/dp8"-->
+                        <!--android:text="@string/buy"-->
+                        <!--android:textColor="@color/white"/>-->
+                <!--</LinearLayout>-->
+            <!--</android.support.v7.widget.CardView>-->
 
             <TextView
                 android:id="@+id/tip_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/cardview"
+                android:layout_below="@id/main_credit_package"
                 android:layout_margin="@dimen/dp8"
                 android:text="@string/ask_consultant"
                 android:textColor="@color/colorAccent"/>

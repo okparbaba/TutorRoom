@@ -33,6 +33,7 @@ public class MainCreditPackageAdapter extends RecyclerView.Adapter<MainCreditPac
         holder.creditTitle.setText(creditPackage.getPackageName());
         holder.creditTitle.setText(String.valueOf(creditPackage.getPackageCredit()));
         holder.creditContent.setText(String.valueOf(creditPackage.getPackageAmount()));
+        holder.credidContentOld.setText(String.valueOf(creditPackage.getPackageAmountOld()));
         holder.buy.setOnClickListener(view ->
                 onClick.onItemClick(creditPackage)
         );
@@ -51,12 +52,14 @@ public class MainCreditPackageAdapter extends RecyclerView.Adapter<MainCreditPac
         TextView creditTitle;
         TextView creditContent;
         TextView buy;
+        TextView credidContentOld;
 
         ViewHolder(View itemView) {
             super(itemView);
             creditTitle = itemView.findViewById(R.id.credit_title);
             creditContent = itemView.findViewById(R.id.credit_content);
             buy = itemView.findViewById(R.id.buy);
+            credidContentOld = itemView.findViewById(R.id.credit_content_old);
         }
     }
 }

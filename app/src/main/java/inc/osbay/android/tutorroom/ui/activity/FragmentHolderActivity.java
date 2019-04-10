@@ -12,6 +12,7 @@ import butterknife.ButterKnife;
 import inc.osbay.android.tutorroom.R;
 import inc.osbay.android.tutorroom.ui.fragment.BackHandledFragment;
 import inc.osbay.android.tutorroom.ui.fragment.ClassroomFAQFragment;
+import inc.osbay.android.tutorroom.ui.fragment.ContactFragment;
 import inc.osbay.android.tutorroom.ui.fragment.ExistingLoginFragment;
 import inc.osbay.android.tutorroom.ui.fragment.LeftMenuDrawerFragment;
 import inc.osbay.android.tutorroom.ui.fragment.LessonFragment;
@@ -66,7 +67,8 @@ public class FragmentHolderActivity extends AppCompatActivity implements BackHan
             bundle.putString(WebviewFragment.WEBVIEW_EXTRA, getIntent().getStringExtra(WebviewFragment.WEBVIEW_EXTRA));
             bundle.putString(WebviewFragment.TITLE_EXTRA, getIntent().getStringExtra(WebviewFragment.TITLE_EXTRA));
             newFragment.setArguments(bundle);
-        }
+        }else if (ContactFragment.class.getSimpleName().equals(fragmentName))
+            newFragment = new ContactFragment();
 
 
         if (newFragment != null) {

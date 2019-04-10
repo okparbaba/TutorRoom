@@ -18,10 +18,10 @@
                              android:top="3dp"/>
                 </shape>
             </item>
-            <item>
-                <bitmap android:gravity="center_vertical|right"
-                        android:src="@mipmap/dropdown_selector_64" />
-            </item>
+            <!--<item>-->
+                <!--<bitmap android:gravity="center_vertical|right"-->
+                        <!--android:src="@drawable/dropdown_selector_64" />-->
+            <!--</item>-->
         </layer-list>
     </item>
 </selector>
